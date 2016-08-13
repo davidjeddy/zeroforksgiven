@@ -39,8 +39,7 @@ $config = [
             'defaultRoute'=>'i18n-message/index'
         ],
         'resutoran' => [
-            'class'         => 'resutoran\backend\Module',
-            'defaultRoute'  => 'default/index'
+            'class'         => 'resutoran\backend\Module'
         ]
     ],
     'as globalAccess'=>[
