@@ -23,8 +23,7 @@ $config = [
             'errorAction' => 'site/error',
         ],
         'request' => [
-            'cookieValidationKey' => env('BACKEND_COOKIE_VALIDATION_KEY'),
-            'baseUrl' => '/admin'
+            'cookieValidationKey' => env('BACKEND_COOKIE_VALIDATION_KEY')
         ],
         'user' => [
             'class'=>'yii\web\User',
@@ -40,7 +39,8 @@ $config = [
             'defaultRoute'=>'i18n-message/index'
         ],
         'resutoran' => [
-            'class'         => 'resutoran\backend\Module'
+            'class'         => 'resutoran\backend\Module',
+            'defaultRoute'  => 'default/index'
         ]
     ],
     'as globalAccess'=>[
