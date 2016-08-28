@@ -10,6 +10,11 @@ $config = [
     'as locale' => [
         'class' => 'common\behaviors\LocaleBehavior',
         'enablePreferredLanguage' => true
+    ],
+    'modules'=>[
+        'resutoran' => [
+            'class' => 'resutoran\common\Module'
+        ]
     ]
 ];
 
