@@ -1,8 +1,8 @@
 <?php
 $config = [
-    'homeUrl'=>Yii::getAlias('@frontendUrl'),
+    'homeUrl' => Yii::getAlias('@frontendUrl'),
     'controllerNamespace' => 'frontend\controllers',
-    'defaultRoute' => 'site/index',
+    'defaultRoute' => 'resutoran/site/index',
     'bootstrap' => ['maintenance'],
     'modules' => [
         'user' => [
@@ -14,6 +14,9 @@ $config = [
             'modules' => [
                 'v1' => 'frontend\modules\api\v1\Module'
             ]
+        ],
+        'resutoran' => [
+            'class' => 'resutoran\frontend\Module',
         ]
     ],
     'components' => [
