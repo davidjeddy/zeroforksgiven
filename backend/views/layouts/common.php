@@ -199,10 +199,8 @@ $bundle = BackendAsset::register($this);
                         ]
                     ]
                 ]) ?>
-
                 <?php
-                // Add resutoran menu to BE main menu - DJE
-                // todo better way? Maybe event listener
+                // TODO better way of including a dependant menu to the boilerplate menu - DJE
                 if (!empty(\Yii::$app->modules['resutoran'])) {
                     include \Yii::getAlias('@vendor') . '/davidjeddy/yii2-resutoran/src/backend/views/layouts/common.php';
                 }; ?>
