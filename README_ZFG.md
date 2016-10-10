@@ -23,3 +23,21 @@ apt-get install git htop multitail tmux php5.6-mbstring php5.6-mcrypt php5.6-mys
 # Setup a swap file
 https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04
 
+# Autoated SQL backup
+install and configure https://github.com/vitalif/grive2
+
+add /home/[user]/dbBackUp.sh
+```BASH
+#! /bin/bash
+DATE=`date +%Y-%m-%d`
+FILENAME="zfg-"$DATE".sql"
+DEST="/usr/grive2/SQLDumps/"
+
+sudo mkdir -p $DEST 1>&2
+mysqldump -udb_backup -p~Asdf1234 > $DEST$FILENAME
+cd /usr/grive2
+sudo grive -u
+```
+
+Add to cron as a daily job 
+ubuntu: `sudo mv ./dbBackup.sh /etc/cron.daily`
