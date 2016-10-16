@@ -5,7 +5,7 @@ $config = [
     'extensions' => require(__DIR__ . '/../../vendor/yiisoft/extensions.php'),
     'sourceLanguage'=>'en-US',
     'language'=>'en-US',
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'raven'],
     'components' => [
 
         'authManager' => [
@@ -77,6 +77,11 @@ $config = [
                     },
                     'logVars'=>[],
                     'logTable'=>'{{%system_log}}'
+                ],
+                'raven' => [
+                    'class' => 'e96\sentry\Target',
+                    'levels'=> ['error', 'warning'],
+                    'dsn'   => env('SENTRY'),
                 ]
             ],
         ],
@@ -142,7 +147,12 @@ $config = [
                 'hostInfo'=>Yii::getAlias('@storageUrl')
             ],
             require(Yii::getAlias('@storage/config/_urlManager.php'))
-        )
+        ),
+
+        'raven' => [
+            'class' => 'e96\sentry\ErrorHandler',
+            'dsn'   => env('SENTRY'),
+        ],
     ],
     'params' => [
         'adminEmail' => env('ADMIN_EMAIL'),
