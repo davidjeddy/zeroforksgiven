@@ -1,6 +1,8 @@
 app:
   links:
     - db_test
+  environment:
+    XDEBUG_CONFIG: "idekey=PHPSTORM remote_enable=On remote_connect_back=On"
 
 db_test:
   image: mysql:5.7

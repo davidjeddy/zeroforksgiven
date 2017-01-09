@@ -1,12 +1,12 @@
 data:
   image: busybox:latest
   volumes:
-    - ./:/code
+    - ./:/app
   entrypoint: tail -f /dev/null
 
-php:
+app:
   build: docker/php
-  working_dir: /code
+  working_dir: /app
   volumes_from:
     - data
   expose:
@@ -20,10 +20,10 @@ nginx:
   ports:
     - "80:80"
   volumes:
-    - ./:/code
+    - ./:/app
     - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
   links:
-    - php
+    - app
 
 mailcatcher:
     image: schickling/mailcatcher:latest
@@ -39,5 +39,5 @@ db:
   environment:
     MYSQL_ROOT_PASSWORD: root
     MYSQL_DATABASE: zfg
-    MYSQL_USER: root
-    MYSQL_PASSWORD: root
+    MYSQL_USER: zfg_dbu
+    MYSQL_PASSWORD: zfg_pass
