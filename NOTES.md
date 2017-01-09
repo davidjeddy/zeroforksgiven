@@ -26,10 +26,10 @@ https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu
 # Automated SQL backup
 install and configure https://github.com/vitalif/grive2
 
-# Add to cron as a daily job
+# Add to cron as a daily job 
 ubuntu: `sudo mv ./dbBackup.sh /etc/cron.daily`
 
-#docker
+#docker 
 docker-compose up --build
 docker exec -it zeroforksgiven sh
 php composer.phar global require "fxp/composer-asset-plugin"
