@@ -1,12 +1,12 @@
 data:
   image: busybox:latest
   volumes:
-    - ./:/app
+    - ./:/code
   entrypoint: tail -f /dev/null
 
-app:
+php:
   build: docker/php
-  working_dir: /app
+  working_dir: /code
   volumes_from:
     - data
   expose:
@@ -20,10 +20,10 @@ nginx:
   ports:
     - "80:80"
   volumes:
-    - ./:/app
+    - ./:/code
     - ./docker/nginx/vhost.conf:/etc/nginx/conf.d/vhost.conf
   links:
-    - app
+    - php
 
 mailcatcher:
     image: schickling/mailcatcher:latest
