@@ -53,7 +53,7 @@ Install application dependencies
 And finally initialize the database schema and demo filler data
 
     docker exec -it zeroforksgiven_db_1 mysql -uroot -proot --execute="CREATE DATABASE IF NOT EXISTS zfg"
-    docker exec -it zeroforksgiven_php_1 php console/yii app/setup --interactive=0
-    docker exec -it zeroforksgiven_php_1 php console/yii migrate/up --interactive=0 --migrationPath=./vendor/davidjeddy/yii2-resutoran/src/migrations/
+    docker-compose run --rm php console/yii app/setup --interactive=0
+    docker-compose run --rm php console/yii migrate/up --interactive=0 --migrationPath=./vendor/davidjeddy/yii2-resutoran/src/migrations/
 
 Now we are ready to send a request to the specified domain and observe output.
