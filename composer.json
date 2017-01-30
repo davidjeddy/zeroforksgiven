@@ -46,7 +46,6 @@
     "hirak/prestissimo":        "^0.3",
     "fxp/composer-asset-plugin":"^1.2",
     "yii2tech/ar-softdelete":   "^1.0",
-    "deployer/deployer":        "^3.0",
     "e96/yii2-sentry":          "dev-master as 1.0",
     "davidjeddy/yii2-resutoran":"dev-dje/master as 1.0"
   },
