@@ -39,5 +39,5 @@ db:
   environment:
     MYSQL_ROOT_PASSWORD: root
     MYSQL_DATABASE: zfg
-    MYSQL_USER: zfg_dbu
-    MYSQL_PASSWORD: zfg_pass
+    MYSQL_USER: root
+    MYSQL_PASSWORD: root
