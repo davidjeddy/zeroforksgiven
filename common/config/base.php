@@ -153,6 +153,10 @@ $config = [
             'class' => 'e96\sentry\ErrorHandler',
             'dsn'   => env('SENTRY'),
         ],
+
+        'dje' => [
+            'class' => \dje\components\HelpfulFunctions::className(),
+        ]
     ],
     'params' => [
         'adminEmail' => env('ADMIN_EMAIL'),
