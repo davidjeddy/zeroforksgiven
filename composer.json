@@ -43,11 +43,13 @@
     "bower-asset/flot": "^0.8",
     "symfony/process": "^3.0",
 
-    "hirak/prestissimo":        "^0.3",
-    "fxp/composer-asset-plugin":"^1.2",
-    "yii2tech/ar-softdelete":   "^1.0",
-    "e96/yii2-sentry":          "dev-master as 1.0",
-    "davidjeddy/yii2-resutoran":"dev-master@dev"
+    "hirak/prestissimo":            "^0.3",
+    "fxp/composer-asset-plugin":    "^1.2",
+    "yii2tech/ar-softdelete":       "^1.0",
+    "e96/yii2-sentry":              "dev-master as 1.0",
+    "davidjeddy/yii2-resutoran":    "dev-devel@dev",
+    "davidjeddy/helpful-functions": "dev-master@dev",
+    "roave/security-advisories":    "dev-master"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "^2.0.0",

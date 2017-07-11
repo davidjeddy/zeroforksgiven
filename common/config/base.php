@@ -155,7 +155,7 @@ $config = [
         ],
 
         'dje' => [
-            'class' => \dje\components\HelpfulFunctions::className(),
+            'class' => \dje\components\HelpfulFunctions::class,
         ]
     ],
     'params' => [
